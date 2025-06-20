@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #taskInput { padding: 8px; width: 70%; }
+        #addButton { padding: 8px 15px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        #taskList { list-style-type: none; padding: 0; }
+        #taskList li { padding: 10px; background-color: #f9f9f9; margin: 5px 0; display: flex; justify-content: space-between; }
+        .deleteButton { background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Yapılacaklar Listesi</h1>
+    <input type="text" id="taskInput" placeholder="Yeni görev ekle...">
+    <button id="addButton">Ekle</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        document.getElementById('addButton').addEventListener('click', function() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                const taskList = document.getElementById('taskList');
+                const newTask = document.createElement('li');
+                
+                newTask.innerHTML = `
+                    <span>${taskText}</span>
+                    <button class="deleteButton">Sil</button>
+                `;
+                
+                taskList.appendChild(newTask);
+                taskInput.value = '';
+                
+                // Sil butonuna tıklanınca görevi kaldır
+                newTask.querySelector('.deleteButton').addEventListener('click', function() {
+                    taskList.removeChild(newTask);
+                });
+            }
+        });
+
+        // Enter tuşu ile ekleme
+        document.getElementById('taskInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('addButton').click();
+            }
+        });
+    </script>
+</body>
+</html>

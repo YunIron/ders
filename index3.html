@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rastgele Renk</title>
+    <style>
+        body { transition: background 0.5s; text-align: center; padding: 50px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <button onclick="changeColor()">Rastgele Renk Üret</button>
+    <script>
+        function changeColor() {
+            const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            document.body.style.background = randomColor;
+        }
+    </script>
+</body>
+</html>
