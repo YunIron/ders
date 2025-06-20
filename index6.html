@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Şifre Güç Göstergesi</title>
+    <style>
+        #password { width: 300px; padding: 8px; }
+        #strengthBar { height: 10px; width: 0%; background: gray; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <input type="password" id="password" placeholder="Şifrenizi girin">
+    <div id="strengthBar"></div>
+    <script>
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+            if (password.length > 0) strength += 20;
+            if (password.length >= 8) strength += 30;
+            if (/[A-Z]/.test(password)) strength += 20;
+            if (/[0-9]/.test(password)) strength += 20;
+            if (/[^A-Za-z0-9]/.test(password)) strength += 10;
+
+            const bar = document.getElementById('strengthBar');
+            bar.style.width = strength + '%';
+            bar.style.background = strength < 50 ? 'red' : strength < 80 ? 'orange' : 'green';
+        });
+    </script>
+</body>
+</html
