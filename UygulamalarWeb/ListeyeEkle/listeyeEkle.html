@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="eleman" type="text">
+    <button id="listeButton" onclick="listeEkle()">Listeye Ekle</button>
+    <div>
+        <ul id="liste"></ul>
+    </div>
+
+    <script>
+        function listeEkle(){
+            var eleman = document.getElementById("eleman").value;
+            
+            document.getElementById("liste").innerHTML += "<li>"+eleman+"</li>"
+        }
+    </script>
+</body>
+</html>

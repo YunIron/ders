@@ -1,0 +1,25 @@
+#ust {
+    background-color:crimson;
+    color:white;
+}
+
+#bolumKisim {
+    background-color: darkgoldenrod;
+}
+
+#pozisyon {
+    background-color: gray  ;
+}
+
+#baslik {
+    background-color: crimson;
+    color:white;
+}
+
+.bilgiBaslik {
+    background-color: khaki;
+}
+
+.bilgiEnter {
+    background-color:palevioletred;
+}

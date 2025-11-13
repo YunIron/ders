@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="chk" checked><br>
+    <div>
+        <img src="manzara2.jpeg" id="resim">
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#chk").on("change", function(){
+                if($(this).prop("checked") == true){
+                    $("#resim").slideDown(2000);
+                } else {
+                    $("#resim").slideUp(2000);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

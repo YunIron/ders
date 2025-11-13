@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="sarki" controls src="sarkiM.mp3"></audio>
+    <div id="durum"></div>
+    <button id="oynat">Oynat</button>
+    <input type="range" id="ses" max="100" min="0" value="10">
+
+    <script>
+        var sarki=document.getElementById("sarki");
+        var durum=document.getElementById("durum");
+        var oynat=document.getElementById("oynat");
+        var ses=document.getElementById("ses");
+
+        oynat.onclick=function(){
+            if(sarki.paused){
+                sarki.play();
+                oynat.textContent="duraklat"
+            }
+            else{
+                sarki.pause();
+                oynat.textContent="oynat"
+            }
+        }
+
+        ses.oninput=function(){
+            sarki.volume = ses.value/100;
+        }
+
+        sarki.onplay=function(){
+            durum.innerHTML="Sarki Basladi"
+        }
+
+        sarki.onpause=function(){
+            durum.innerHTML="Sarki Durduruldu."
+        }
+
+        sarki.onvolumechange=function(){
+            ses.value=sarki.volume*100;
+        }
+    </script>
+</body>
+</html>

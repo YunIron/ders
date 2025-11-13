@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bilgiKaydet(){
+            document.isimForm.isim.value = "Bilgileriniz kaydedilmistir."
+            
+        }
+
+        function uyariVer(){
+            document.isimForm.isim.value = "Lutfen yanlislik yapmayiniz"
+        }
+    </script>
+</head>
+<body>
+    <form name="isimForm"  >
+        Lutfen adinizi yazin ve sayfa uzerinde baska bir yeri tiklayin
+        <br>
+        <input name="isim" type="text" placeholder="Isminizi giriniz" onblur="bilgiKaydet()">
+        <br>
+        <br>
+        Lutfen mesleginizi yazin ve sayfa uzerinde baska bir yeri tiklayin
+        <br>
+        <input name="meslek" type="text" placeholder="Mesleginizi giriniz" onfocus="uyariVer()">
+    </form>
+</body>
+</html>

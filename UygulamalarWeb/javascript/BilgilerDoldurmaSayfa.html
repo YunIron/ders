@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <form name="bilgiler">
+        Ad Soyad:<input name="adsoyad" type="text">
+        <br>
+        Sifre:<input name="sifre" type="password">
+        <br>
+        Sifre Acik:<input name="sifreAcik" type="text">
+        <br>
+        Dogum Yeri:<select id="sehir" name="sehir" onchange="sehir_ayrinti_goster()">
+                    <option value="34">Istanbul</option>
+                    <option value="06">Ankara</option>
+                    <option value="61">Trabzon</option>
+                    <option value="35">Izmir</option>
+                </select>
+        <br>
+        Sehir Ayrinti: <textarea name="sehir_ayrinti" id="sehir_ayrinti"></textarea>
+        <br>
+        Cinsiyet: Kadin<input name="cinsiyet" type="radio" id="k"> Erkek<input name="cinsiyet" type="radio" id="e">
+        <br>
+        Hobiler:<br><input type="checkbox" name="muzik" id="muzik">Muzik Dinlemek
+                <br><input type="checkbox" name="spor" id="spor">Spor Yapmak
+                <br><input type="checkbox" name="tv" id="tv">TV Izlemek<br>
+        Adres: <textarea name="adres" id="adres">Adres bilgisi girilecek</textarea><br>
+        <input type="button" value="Goster" onclick="goster()">
+    </form>
+    <div id="sonuc">
+        <h3>Sonuclar</h3>
+    </div>
+</body>
+</html>

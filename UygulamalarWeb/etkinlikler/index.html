@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("#t1").on("keyup", function(){
+                var yazi = $("#t1").val();
+                $("#d1").html(yazi.length);
+            })
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

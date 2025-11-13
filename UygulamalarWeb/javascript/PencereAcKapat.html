@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ac(){
+            ypencere = window.open("","yenipencere", "toolbar, status=1, width=475, height=80")
+            ypencere.document.write("Sol alt kosedeki durum cubuna bakin.")
+            ypencere.window.status="Durum cubuguna mesaj yazabilirsiniz."
+        }
+
+        function kapat(){
+            ypencere.close()
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Pencere Ac" onclick="ac()">
+    <br>
+    <br>
+    <br>
+    <input type="button" value="Pencere Kapat" onclick="kapat()"> 
+</body>
+</html>

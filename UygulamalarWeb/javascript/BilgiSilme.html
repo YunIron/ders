@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function kurtar(){
+            return confirm("Bu bilgileri silmeye emin misiniz?")
+        }
+    </script>
+</head>
+<body>
+    <form method="get" onreset="return kurtar()">
+        Isim:<input name="isim" type="text">
+        <input type="reset" value="Sil">
+    </form>
+</body>
+</html>

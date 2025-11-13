@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function girBilgi(form){
+        bilgi1.innerHTML = document.kimlik.veri1.value
+        bilgi2.innerHTML = document.kimlik.veri2.value
+        bilgi3.innerHTML = document.kimlik.veri3.value
+        }
+    </script>
+</head>
+<body>
+    <form name="kimlik">
+        Adiniz:<input name="veri1" type="text">
+        <br>
+        Soyadiniz:<input name="veri2" type="text">
+        <br>
+        Yasiniz:<input name="veri3" type="text">
+        <input type="button" value="Bilgileri Tabloya gir" onclick="girBilgi(this.form)">
+        <br>
+        <br>
+    </form>
+    <table cellpadding="5px" border="1">
+        <tr>
+            <td width="100">Adiniz</td>
+            <td width="300" id="bilgi1"></td>
+        </tr>
+        <tr>
+            <td>Soyadiniz</td>
+            <td id="bilgi2"></td>
+        </tr>
+        <tr>
+            <td>Yasiniz</td>
+            <td id="bilgi3"></td>
+        </tr>   
+    </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+#header{
+    height: 60px;
+    width: 100%;
+    font-family: verdana;
+    font-size: 20px;
+    background-color:cornflowerblue;
+    display: flex   ;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu{
+    height: 500px;
+    width: 15%;
+    font-family: verdana;
+    background-color:powderblue;
+    padding-top: 50px;
+}
+
+#main{
+    display: flex;
+}
+
+#sayfa{
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: Verdana;
+    background-color: whitesmoke;
+}
+
+#footer{
+    height: 30px;
+    width: 100%;
+    background-color:cornflowerblue;
+    display: flex   ;
+    align-items: center;
+    justify-content: center;
+}

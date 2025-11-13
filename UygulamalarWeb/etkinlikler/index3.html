@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="isaretle">Isaretle</button><br>
+    <button id="kaldir">Kaldir</button><br>
+    <input id="c1" type="checkbox">
+
+    <script>
+        $(document).ready(function(){
+            $("#isaretle").click(function(){
+                $("#c1").attr("checked",true);
+            })
+            $("#kaldir").click(function(){
+                $("#c1").attr("checked",false);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="color" id="renk">
+    <br>    
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+
+    <script>
+        $(document).ready(function(){
+            $(".kutu").click(function(){
+                var secilenrenk = $("#renk").val();
+                $(this).css("backgroundColor", secilenrenk);
+            });
+        });
+    </script>
+    <style>
+        .kutu {
+            width: 200px;
+            height: 200px;
+            float: left;
+            border: #000 solid 2px;
+            margin: 3px;
+        }
+    </style>
+</body>
+
+</html>
